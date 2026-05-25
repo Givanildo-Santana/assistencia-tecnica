@@ -1,0 +1,8 @@
+spring.application.name=assistencia-tecnica
+spring.datasource.url=jdbc:mysql://localhost:3306/assistencia_tecnica
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.open-in-view=false
