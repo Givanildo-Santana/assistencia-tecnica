@@ -15,7 +15,6 @@ public class Peca {
     private Long id;
 
     private String nome;
-
     @Column(unique = true)
     private String codigoFabricante;
     private String fornecedor;

@@ -18,7 +18,7 @@ public class Agendamento {
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
-    private LocalDateTime dataHora;
+    private LocalDateTime agendamentoDataHora;
     private StatusAgendamento statusAgendamento;
 
     @ManyToOne
