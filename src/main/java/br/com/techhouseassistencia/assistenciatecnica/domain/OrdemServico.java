@@ -33,6 +33,7 @@ public class OrdemServico {
     private LocalDateTime dataAbertura;
     private LocalDateTime dataFechamento;
 
+    @Enumerated(EnumType.STRING)
     private StatusOS statusOs;
     private String diagnostico;
     private BigDecimal valorCobrado;

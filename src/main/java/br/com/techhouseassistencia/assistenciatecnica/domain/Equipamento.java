@@ -17,8 +17,11 @@ public class Equipamento {
     @JoinColumn(name="ordem_servico_id")
     private OrdemServico ordemServico;
 
+    @Enumerated(EnumType.STRING)
     private MarcaEquipamento marcaEquipamento;
+    @Enumerated(EnumType.STRING)
     private TipoEquipamento tipoEquipamento;
+    @Enumerated(EnumType.STRING)
     private TensaoEquipamento tensaoEquipamento;
     private String modeloEquipamento;
     private String numeroSerie;

@@ -20,6 +20,7 @@ public class Pagamento {
     @ManyToOne
     @JoinColumn(name="ordem_servico_id")
     private OrdemServico ordemServico;
+    @Enumerated(EnumType.STRING)
     private FormaPagamento formaPagamento;
     private BigDecimal valor;
     private LocalDateTime dataPagamento;

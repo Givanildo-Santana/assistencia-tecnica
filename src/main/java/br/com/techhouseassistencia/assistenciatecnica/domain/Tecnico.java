@@ -18,6 +18,7 @@ public class Tecnico {
     private String telefone;
 
     @ElementCollection
+    @Enumerated(EnumType.STRING)
     private List<EspecialidadeTecnico> especialidadeTecnico;
     private boolean ativo;
 

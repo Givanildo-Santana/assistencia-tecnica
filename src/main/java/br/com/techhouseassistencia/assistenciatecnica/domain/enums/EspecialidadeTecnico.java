@@ -6,5 +6,5 @@ public enum EspecialidadeTecnico {
     SECADORA,
     LAVA_E_SECA,
     GELADEIRA,
-    AR_CONDIONADO,
+    AR_CONDICIONADO
 }

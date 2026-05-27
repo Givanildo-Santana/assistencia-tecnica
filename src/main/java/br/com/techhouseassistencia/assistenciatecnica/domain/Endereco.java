@@ -14,6 +14,7 @@ public class Endereco {
     private String cep;
     private String rua;
     private String numero;
+    @Enumerated(EnumType.STRING)
     private TipoResidencia tipoResidencia;
     private String complemento;
 }

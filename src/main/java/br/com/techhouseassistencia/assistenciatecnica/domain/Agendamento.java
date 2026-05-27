@@ -19,6 +19,7 @@ public class Agendamento {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
     private LocalDateTime agendamentoDataHora;
+    @Enumerated(EnumType.STRING)
     private StatusAgendamento statusAgendamento;
 
     @ManyToOne
