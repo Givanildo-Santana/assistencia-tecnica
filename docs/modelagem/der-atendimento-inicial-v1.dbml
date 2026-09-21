@@ -1,0 +1,70 @@
+Table Cliente {
+  id integer [primary key]
+  nome varchar(50)
+  telefone varchar(12)
+  email varchar(75)
+  endereco varchar(150)
+}
+
+Table Produto{
+  id integer [primary key]
+  marca varchar(50)
+  tipo varchar(50)
+  modelo varchar(50)
+  numero_serie varchar(50)
+  tensao_eletrica varchar(10)
+}
+
+Table Contato {
+  id integer [primary key]
+  telefone varchar(12)
+  descricao text 
+  data_hora datetime
+}
+
+Table Atendimento {
+  id integer [primary key]
+  id_cliente int
+  id_produto int
+  id_contato int
+}
+
+Table Agendamento {
+  id integer [primary key]
+  id_atendimento int
+  data date
+  periodo varchar(10)
+}
+
+Ref: Atendimento.id_cliente > Cliente.id
+Ref: Atendimento.id_produto > Produto.id
+Ref: Atendimento.id_contato - Contato.id
+Ref: Agendamento.id_atendimento > Atendimento.id
+
+
+
+
+/* Ref user_posts: posts.user_id ?> users.id // many-to-one
+
+Ref: users.id <? follows.following_user_id
+
+Ref: users.id <? follows.followed_user_id
+
+Records users(id, username, role) {
+  0, 'Alice', 'admin'
+  1, 'Bob', 'moderator'
+  2, 'Candice', 'moderator'
+  3, 'David', 'member'
+}
+
+Records follows(following_user_id, followed_user_id, created_at) {
+  1, 0, '2026-01-01'
+  3, 2, '2026-02-28'
+}
+
+Records posts(id, title, user_id) {
+  0, 'Welcome to the forum!', 0
+  1, 'Guidelines', 1
+  2, 'Hello all!', 3
+}
+*/
