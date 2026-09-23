@@ -26,8 +26,9 @@ public class Atendimento {
     private Produto produto;
 
     @Setter
-    @OneToMany(mappedBy = "atendimento")
-    private List<Contato> contatos;
+    @JoinColumn(name = "contato_id", nullable = false)
+    @OneToOne
+    private Contato contato;
 
     @Setter
     @OneToMany(mappedBy = "atendimento")
@@ -35,10 +36,10 @@ public class Atendimento {
 
     public Atendimento() {}
 
-    public Atendimento(Cliente cliente, Produto produto, List<Contato> contatos) {
+    public Atendimento(Cliente cliente, Produto produto, Contato contato) {
         this.cliente = cliente;
         this.produto = produto;
-        this.contatos = contatos;
+        this.contato = contato;
     }
 
     @Override
@@ -46,11 +47,11 @@ public class Atendimento {
         return """
                 Cliente: %s
                 Produto: %s
-                Contatos: %s
+                Contato: %s
                 """.formatted(
                         getCliente(),
                         getProduto(),
-                        getContatos()
+                        getContato()
                 );
     }
 }

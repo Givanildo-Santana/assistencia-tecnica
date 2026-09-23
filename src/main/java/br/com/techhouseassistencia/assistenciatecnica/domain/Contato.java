@@ -28,8 +28,7 @@ public class Contato {
     private LocalDateTime dataHora;
 
     @Setter
-    @ManyToOne
-    @JoinColumn(name = "atendimento_id", nullable = false)
+    @OneToOne(mappedBy = "contato")
     private Atendimento atendimento;
 
     public Contato() {}
